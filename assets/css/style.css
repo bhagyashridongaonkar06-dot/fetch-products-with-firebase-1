@@ -1,0 +1,11 @@
+tr td img{
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+}
+/* table{
+    background-color: white;
+}
+table tbody tr:hover{
+    background-color: rgba(132, 192, 219, 0.8);
+} */
