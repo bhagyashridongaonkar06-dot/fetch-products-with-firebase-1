@@ -154,6 +154,10 @@ function onSubmit(eve) {
       let srno = document.querySelectorAll(
         "#productContainer tr td:first-child",
       );
+      snackbar(
+        `Product with name ${newProd.productName} updated successfully`,
+        "success",
+      );
       srno.forEach((e, i) => {
         e.innerText = i + 1;
       });
@@ -262,7 +266,7 @@ function onRemove(ele) {
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
     cancelButtonColor: "#d33",
-    confirmButtonText: "Yes, delete it!",
+    confirmButtonText: "Yes, Remove it!",
   }).then((result) => {
     if (result.isConfirmed) {
         spinnerHandler(true)
@@ -294,6 +298,8 @@ function onRemove(ele) {
           srno.forEach((e, i) => {
             e.innerText = i + 1;
           });
+
+          snackbar(`product with id ${removeId} removed successfully`, 'succcess')
         })
         .catch(err =>{
             cl(err)
